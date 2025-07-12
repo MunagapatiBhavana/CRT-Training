@@ -123,3 +123,14 @@ Inorder: 4 2 5 1 3
 Preorder: 1 2 4 5 3
 
 Postorder: 4 5 2 3 1
+
+## 🧠 Stack vs Heap Memory
+
+| Feature        | Stack                                    | Heap                                        |
+| -------------- | ---------------------------------------- | ------------------------------------------- |
+| **Memory**     | Static memory allocation                 | Dynamic memory allocation                   |
+| **Access**     | Fast (LIFO - Last In First Out)          | Slower (accessed via pointers)              |
+| **Size**       | Limited                                  | Larger than stack                           |
+| **Usage**      | Used for function calls, local variables | Used for dynamic memory (e.g., malloc in C) |
+| **Managed by** | Compiler                                 | Programmer (manual) / Garbage Collector     |
+| **Lifetime**   | Short (ends with function call)          | Long (until deallocated manually)           |
