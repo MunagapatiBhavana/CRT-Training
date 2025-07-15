@@ -1,6 +1,6 @@
- Day 12: Binary Search Trees (BST)
+## Day 12: Binary Search Trees (BST)
 
- 📅 Topics Covered:
+ ## 📅 Topics Covered:
 Introduction to Binary Search Tree (BST)
 
 Insertion in BST (Recursive & Iterative)
@@ -13,7 +13,7 @@ Lowest Common Ancestor (LCA) – based on Value & Level
 
 Inorder Predecessor & Successor
 
-🌳 1. Binary Search Tree (BST)
+## 🌳 1. Binary Search Tree (BST)
 A BST is a binary tree in which:
 
 Left child < Parent node
@@ -22,7 +22,7 @@ Right child > Parent node
 
 🔧 2. Insertion in BST
 
-✅ Recursive Approach
+## ✅ Recursive Approach
 
 struct TreeNode* insertBST(struct TreeNode* root, int val) {
 
@@ -39,7 +39,7 @@ struct TreeNode* insertBST(struct TreeNode* root, int val) {
     return root;
 }
 
-✅ Iterative Approach
+## ✅ Iterative Approach
 
 struct TreeNode* insertIterative(struct TreeNode* root, int val) {
 
@@ -66,7 +66,7 @@ struct TreeNode* insertIterative(struct TreeNode* root, int val) {
     return root;
 }
 
-❌ 3. Deletion in BST
+## ❌ 3. Deletion in BST
 
 struct TreeNode* findMax(struct TreeNode* root) {
 
@@ -100,7 +100,7 @@ struct TreeNode* deleteNode(struct TreeNode* root, int key) {
     return root;
 }
 
-🧩 4. Construct BST from Postorder Traversal
+## 🧩 4. Construct BST from Postorder Traversal
 Example: Postorder = [1, 7, 5, 50, 40, 10]
 
 int idx;
@@ -128,9 +128,9 @@ struct TreeNode* constructBSTFromPostorder(int post[], int size) {
     return constructBSTFromPostorderUtil(post, INT_MIN, INT_MAX);
 }
 
-🔍 5. Lowest Common Ancestor (LCA)
+## 🔍 5. Lowest Common Ancestor (LCA)
 
-✅ Based on Value
+## ✅ Based on Value
 
 struct TreeNode* findLCA(struct TreeNode* root, int n1, int n2) {
 
@@ -142,7 +142,7 @@ struct TreeNode* findLCA(struct TreeNode* root, int n1, int n2) {
     return root;
 }
 
-✅ Based on Level (Depth-first Search)
+## ✅ Based on Level (Depth-first Search)
 
 int findLevel(struct TreeNode* root, int val, int level) {
 
@@ -153,7 +153,7 @@ int findLevel(struct TreeNode* root, int val, int level) {
     return findLevel(root->right, val, level + 1);
 }
 
-🔁 6. Inorder Predecessor & Successor
+## 🔁 6. Inorder Predecessor & Successor
 
 void findPreSuc(struct TreeNode* root, struct TreeNode** pre, struct TreeNode** suc, int key) {
     if (!root) return;
@@ -184,7 +184,7 @@ void findPreSuc(struct TreeNode* root, struct TreeNode** pre, struct TreeNode** 
     }
 }
 
-🟦 Inorder Predecessor
+## 🟦 Inorder Predecessor
 The inorder predecessor of a node in a BST is the previous node in the inorder traversal.
 
 It is the largest value node in the left subtree of the given node.
@@ -193,7 +193,7 @@ How to find it:
 
 If the node has a left child, go to the rightmost node in its left subtree.
 
-🟩 Inorder Successor
+## 🟩 Inorder Successor
 The inorder successor of a node in a BST is the next node in the inorder traversal.
 
 It is the smallest value node in the right subtree of the given node.
