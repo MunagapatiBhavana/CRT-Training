@@ -1,69 +1,78 @@
-### 🧠 Magic square puzzle
- 
- Fill a 3x3 matrix with numbers between 11 and 19 such that:
+# 🧠 Magic Square Puzzle: 3×3 Matrix Using Numbers 11–19
 
-Each row, column, and diagonal sums to 45.
+## 🎯 Objective
 
-This is essentially a magic square, but with a custom number range: 11 to 19.
+Fill a **3×3 matrix** using **each number from 11 to 19 exactly once**, such that the **sum of every row, column, and both diagonals** is exactly **45**.
 
-🎯 Step 1: Understand the constraints
-Matrix size: 3×3 = 9 cells
+---
 
-Valid numbers: 11–19 inclusive ⇒ Total 9 numbers:
-11, 12, 13, 14, 15, 16, 17, 18, 19
+## 📌 Step 1: Understand the Constraints
 
-No repeats allowed.
+- Matrix size: **3×3 = 9 cells**
+- Allowed numbers: **11 to 19** (inclusive)  
+  Set of numbers: `11, 12, 13, 14, 15, 16, 17, 18, 19`
+- **No duplicates allowed**
+- Every:
+  - Row
+  - Column
+  - Diagonal  
+  must sum to **45**
 
-Magic square condition: all rows, columns, and diagonals sum to 45
+---
 
-🔢 Step 2: Total sum check
-If each row sums to 45, and there are 3 rows, the total matrix sum =
-45 × 3 = 135
+## 🔢 Step 2: Total Sum Validation
 
-Let’s check sum of all numbers from 11 to 19:
+Each row must sum to 45  
+→ Total sum of the matrix = `45 × 3 = 135`
 
-11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 = (11 + 19) * 9 / 2 = 135
+Now sum the numbers from 11 to 19:
 
-✅ Total adds up correctly — this confirms that the set can form a valid magic square!
+Sum = (first + last) × count / 2
+= (11 + 19) × 9 / 2
+= 30 × 4.5 = 135
 
-✨ Step 3: Create the Magic Square
 
-┌────┬────┬────┐
-│ 18 │ 11 │ 16 │
-├────┼────┼────┤
-│ 13 │ 15 │ 17 │
-├────┼────┼────┤
-│ 14 │ 19 │ 12 │
-└────┴────┴────┘
+✅ The total adds up correctly. A valid magic square is possible using the given numbers.
 
-✅ Step 4: Verify all sums = 45
+---
 
-Rows:
-Row 1: 18 + 11 + 16 = 45
+## ✨ Step 3: Construct the Magic Square
 
-Row 2: 13 + 15 + 17 = 45
+We map a classic Lo Shu magic square (which uses 1–9) to our custom range (11–19):
 
-Row 3: 14 + 19 + 12 = 45
 
-Columns:
-Col 1: 18 + 13 + 14 = 45
+**Mapped Magic Square (Final Answer):**
 
-Col 2: 11 + 15 + 19 = 45
+|     |     |     |
+|-----|-----|-----|
+| 18  | 11  | 16  |
+| 13  | 15  | 17  |
+| 14  | 19  | 12  |
 
-Col 3: 16 + 17 + 12 = 45
 
-Diagonals:
-18 + 15 + 12 = 45
 
-16 + 15 + 14 = 45
+---
 
-✅ All sums are correct!
+## ✅ Step 4: Verify All Sums = 45
 
-🎉 Final Answer
-┌────┬────┬────┐
-│ 18 │ 11 │ 16 │
-├────┼────┼────┤
-│ 13 │ 15 │ 17 │
-├────┼────┼────┤
-│ 14 │ 19 │ 12 │
-└────┴────┴────┘
+### Rows:
+- Row 1: 18 + 11 + 16 = **45**
+- Row 2: 13 + 15 + 17 = **45**
+- Row 3: 14 + 19 + 12 = **45**
+
+### Columns:
+- Col 1: 18 + 13 + 14 = **45**
+- Col 2: 11 + 15 + 19 = **45**
+- Col 3: 16 + 17 + 12 = **45**
+
+### Diagonals:
+- Diagonal 1 (Top-left to bottom-right): 18 + 15 + 12 = **45**
+- Diagonal 2 (Top-right to bottom-left): 16 + 15 + 14 = **45**
+
+---
+
+## 🏁 Conclusion
+
+- ✔️ All numbers between 11 and 19 are used exactly once.
+- ✔️ Every row, column, and diagonal sums to 45.
+- ✔️ Valid magic square is successfully constructed!
