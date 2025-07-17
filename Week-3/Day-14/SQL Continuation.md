@@ -103,3 +103,104 @@ SELECT GREATEST(10, 20, 5) FROM DUAL; -- Output: 20
 | DUAL         | Use expressions/functions without a table |
 | MAX/GREATEST | Compare values and columns                |
 
+
+## 📅  Date Functions
+
+SQL provides several functions to manipulate and extract information from date values.
+
+### 🔹 Common Date Functions
+| Function        | Description                             | Example                           |
+|----------------|-----------------------------------------|-----------------------------------|
+| `CURRENT_DATE`  | Returns the current system date         | `SELECT CURRENT_DATE;`            |
+| `NOW()`         | Returns current date and time           | `SELECT NOW();`                   |
+| `EXTRACT()`     | Extract part of a date (year, month...) | `SELECT EXTRACT(YEAR FROM order_date) FROM orders;` |
+| `DATE_ADD()`    | Adds interval to a date                 | `SELECT DATE_ADD('2023-01-01', INTERVAL 7 DAY);`     |
+| `DATEDIFF()`    | Days between two dates                  | `SELECT DATEDIFF('2023-08-01', '2023-07-01');`        |
+
+---
+
+## 🔄  Date Conversion Functions
+
+Used to convert string to date and vice versa.
+
+### 🔹 Examples
+
+-- Convert string to date
+SELECT STR_TO_DATE('24-07-2024', '%d-%m-%Y');
+
+-- Format date into string
+SELECT DATE_FORMAT(NOW(), '%W, %d %M %Y');  -- Output: Wednesday, 24 July 2024
+
+##  HAVING Clause
+Used to filter groups after applying aggregate functions (unlike WHERE which filters rows before grouping).
+
+SELECT department, COUNT(*) AS employee_count
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+
+## 🔁 Nested Queries (Subqueries)
+A query within another query. Can be used in SELECT, FROM, or WHERE clauses.
+
+## 🔹 Example: Subquery in WHERE
+
+SELECT name
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+## 🔹 Example: Subquery in FROM
+
+SELECT dept, avg_sal
+FROM (
+  SELECT department AS dept, AVG(salary) AS avg_sal
+  FROM employees
+  GROUP BY department
+) AS dept_avg;
+
+## ⚖️  Multi-Row Operators
+Used to compare a value with a set of values from a subquery.
+
+🔹 Operators
+IN
+
+ANY
+
+ALL
+
+## 🔹 Example: IN
+
+SELECT name
+FROM employees
+WHERE department_id IN (SELECT department_id FROM departments WHERE location = 'Bangalore');
+
+## 🔹 Example: > ANY
+
+SELECT name
+FROM employees
+WHERE salary > ANY (SELECT salary FROM employees WHERE department = 'HR');
+
+## 🔢 6. ROWNUM / ROW_NUMBER()
+🔹 ROWNUM (Oracle-specific)
+Returns a number indicating the order of returned rows.
+
+SELECT *
+FROM (
+  SELECT * FROM employees
+)
+WHERE ROWNUM <= 5;
+
+## 🔹 ROW_NUMBER() (SQL standard)
+Assigns a unique number to each row within a result set.
+
+SELECT name, salary,
+  ROW_NUMBER() OVER (ORDER BY salary DESC) AS row_num
+FROM employees;
+
+| Concept                | Used For                                 |
+| ---------------------- | ---------------------------------------- |
+| Date Functions         | Extracting, formatting, comparing dates  |
+| Date Conversion        | Changing between string and date formats |
+| HAVING Clause          | Filtering after aggregation              |
+| Nested Queries         | Creating layered logic                   |
+| Multi-Row Operators    | Comparing values with subquery results   |
+| ROWNUM / ROW\_NUMBER() | Row-level ordering and filtering         |
