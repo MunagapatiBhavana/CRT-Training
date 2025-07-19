@@ -47,10 +47,10 @@ This program is a focused initiative aimed at enhancing technical and aptitude s
 | Week | Topics Covered                        | Link                  |
 |------|----------------------------------------|------------------------|
 | Week 1 | Problem solving Essentials and Linear data structures | [📁 Week 1](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-1/) |
-| Week 2 | Problem solving - Implementing Algorithms & Non-Linear data structures | [📁 Week 2](./Week2/) |
-| Week 3 | Dynamic Programming, Back Tracking and Graph theory   | [📁 Week 3](./Week3/) |
+| Week 2 | Problem solving - Implementing Algorithms & Non-Linear data structures | [📁 Week 2](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-2/) |
+| Week 3 | Dynamic Programming, Back Tracking and Graph theory   | [📁 Week 3](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-3/) |
 | Week 4 | Graph Algorithm, String Matching, DBMS, OS, CN | [📁 Week 4](./Week4/) |
-| Week 5 | SQL query optimization, Normalization, case based application | [📁 Week 4](./Week4/) |
+| Week 5 | SQL query optimization, Normalization, case based application | [📁 Week 5](./Week5/) |
 
 ---
 
@@ -63,14 +63,27 @@ CRT-Training/
 │   ├── Day2_Arrays
 │   └── Day3_2DArrays & Pointers
 |   └── Day4_Strings
+|   └── Day5_structures.md
+|   └── Day6_LinkedList.md
 ├── Week2/
-│   ├── 
-│   ├── 
-│   └── ...
+│   ├── Day7_Queues.md
+         ├──Stacks.md
+│   ├── Day8_Searching.md
+         ├──Sorting.md
+         ├── Expression Evaluation.md
+│   ├── Day9_Power Function.md
+        ├──Sorting.md
+        ├──Fun Logic.md
+│   ├── Day10_Trees.md
+│   ├── Day11_Tree traversal.md
+│   └── Day12_3x3_MagicSquare_Challenge.md
+        ├──BST.md
 ├── Week3/
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── Day13_SQL.md
+│   ├── Day14_SQL Continuation.md
+│   └── Day15_Greedy Algorithms.md
+          └──Joins.md
+│   ├── Day16_Operating_Systems.md
 ├── Week4/
 │   └──
 ├── Week5/
