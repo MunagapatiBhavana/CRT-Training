@@ -49,7 +49,7 @@ This program is a focused initiative aimed at enhancing technical and aptitude s
 | Week 1 | Problem solving Essentials and Linear data structures | [📁 Week 1](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-1/) |
 | Week 2 | Problem solving - Implementing Algorithms & Non-Linear data structures | [📁 Week 2](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-2/) |
 | Week 3 | Dynamic Programming, Back Tracking and Graph theory   | [📁 Week 3](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-3/) |
-| Week 4 | Graph Algorithm, String Matching, DBMS, OS, CN | [📁 Week 4](./Week4/) |
+| Week 4 | Graph Algorithm, String Matching, DBMS, OS, CN | [📁 Week 4](./https://github.com/MunagapatiBhavana/CRT-Training/tree/main/Week-4/) |
 | Week 5 | SQL query optimization, Normalization, case based application | [📁 Week 5](./Week5/) |
 
 ---
@@ -87,7 +87,8 @@ CRT-Training/
 │   ├── Day17_Dynamic Programming.md
 │   ├── Day18_Problems on DP.md
 ├── Week4/
-│   └──
+│   └── Day19_BackTracking.md
+│   └── Day20_Graph ALgorithms
 ├── Week5/
 │   └──
 ├── README.md
